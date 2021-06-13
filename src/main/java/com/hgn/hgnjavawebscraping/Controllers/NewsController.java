@@ -7,16 +7,18 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.text.ParseException;
 
 @RestController
 @RequestMapping("/news")
 public class NewsController {
 
-  @Autowired private NewsService newsService;
+    @Autowired
+    private NewsService newsService;
 
-  @PostMapping
-  @ResponseStatus(HttpStatus.CREATED)
-  public News save(@RequestBody String url) throws IOException {
-    return newsService.convertNews(url);
-  }
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public News save(@RequestBody String url) throws IOException, ParseException {
+        return newsService.convertNews(url);
+    }
 }
