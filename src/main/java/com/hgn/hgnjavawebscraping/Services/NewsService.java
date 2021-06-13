@@ -46,3 +46,5 @@ public class NewsService {
         return newsRepository.save(news);
     }
 }
+
+//teste
