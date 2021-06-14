@@ -2,10 +2,7 @@ package com.hgn.hgnjavawebscraping.Entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class News {
@@ -22,6 +19,7 @@ public class News {
     @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
     private String date;
 
+    @Column(length = 100000)
     private String content;
 
     public News() {

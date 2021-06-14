@@ -11,12 +11,24 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class NewsService {
 
     @Autowired
     private NewsRepository newsRepository;
+
+    public List<News> listAllNews() {
+        return newsRepository.findAll();
+    }
+
+    public News listById(Integer id) {
+        Optional<News> optionalNews = newsRepository.findById(id);
+        News news = optionalNews.get();
+        return news;
+    }
 
     public News save(News news) {
         return newsRepository.save(news);
