@@ -1,4 +1,4 @@
-package com.hgn.hgnjavawebscraping.Entities;
+package com.hgn.hgnjavawebscraping.entities;
 
 
 import javax.persistence.Column;

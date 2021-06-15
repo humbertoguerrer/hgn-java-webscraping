@@ -1,6 +1,6 @@
-package com.hgn.hgnjavawebscraping.Repositories;
+package com.hgn.hgnjavawebscraping.repositories;
 
-import com.hgn.hgnjavawebscraping.Entities.News;
+import com.hgn.hgnjavawebscraping.entities.News;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

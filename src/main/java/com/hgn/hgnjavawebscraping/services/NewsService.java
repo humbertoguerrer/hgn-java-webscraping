@@ -1,7 +1,7 @@
-package com.hgn.hgnjavawebscraping.Services;
+package com.hgn.hgnjavawebscraping.services;
 
-import com.hgn.hgnjavawebscraping.Entities.News;
-import com.hgn.hgnjavawebscraping.Repositories.NewsRepository;
+import com.hgn.hgnjavawebscraping.entities.News;
+import com.hgn.hgnjavawebscraping.repositories.NewsRepository;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
