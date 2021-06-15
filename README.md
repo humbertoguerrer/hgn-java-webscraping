@@ -36,6 +36,8 @@ Conforme requisitado, foram disponibilizados 4 endpoints:
 - Obter a notícia através do ID informado;
 - Obter notícias através de palavra chave.
 
+**Disponibilizado no DockerHub, bastando utilizar o comando `docker pull humbertoguerrer/hgn-java-webscraping:0.0.1-SNAPSHOT`**
+
 ## Executar a aplicação
 
 Para executar a aplicação, faça um clone do projeto.
