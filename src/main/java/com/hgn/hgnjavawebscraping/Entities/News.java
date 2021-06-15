@@ -1,8 +1,11 @@
 package com.hgn.hgnjavawebscraping.Entities;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class News {
@@ -16,7 +19,6 @@ public class News {
     private String subtitle;
     private String author;
 
-    @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
     private String date;
 
     @Column(length = 100000)
@@ -97,4 +99,5 @@ public class News {
     public void setContent(String content) {
         this.content = content;
     }
+
 }

@@ -5,7 +5,6 @@ import com.hgn.hgnjavawebscraping.Repositories.NewsRepository;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -18,8 +17,11 @@ import java.util.stream.Collectors;
 @Service
 public class NewsService {
 
-    @Autowired
-    private NewsRepository newsRepository;
+    private final NewsRepository newsRepository;
+
+    public NewsService(NewsRepository newsRepository) {
+        this.newsRepository = newsRepository;
+    }
 
     public List<News> listAllNews() {
         return newsRepository.findAll();
@@ -63,4 +65,5 @@ public class NewsService {
         return newsRepository.findByContentContains(keyword)
                 .stream().collect(Collectors.toList());
     }
+
 }

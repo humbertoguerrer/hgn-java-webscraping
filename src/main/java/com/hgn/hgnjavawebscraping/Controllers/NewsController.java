@@ -1,28 +1,31 @@
 package com.hgn.hgnjavawebscraping.Controllers;
 
 import com.hgn.hgnjavawebscraping.Entities.News;
-import com.hgn.hgnjavawebscraping.Repositories.NewsRepository;
 import com.hgn.hgnjavawebscraping.Services.NewsService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @RestController
 @RequestMapping("/news")
 public class NewsController {
 
-    @Autowired
-    private NewsService newsService;
+    private final NewsService newsService;
 
-    @Autowired
-    private NewsRepository newsRepository;
+    public NewsController(NewsService newsService) {
+        this.newsService = newsService;
+    }
 
     @GetMapping
     public List<News> listAllNews() {
