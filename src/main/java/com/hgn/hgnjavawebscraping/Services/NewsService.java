@@ -13,6 +13,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class NewsService {
@@ -57,6 +58,9 @@ public class NewsService {
 
         return newsRepository.save(news);
     }
-}
 
-//teste
+    public List<News> listByWords(String keyword) {
+        return newsRepository.findByContentContains(keyword)
+                .stream().collect(Collectors.toList());
+    }
+}
