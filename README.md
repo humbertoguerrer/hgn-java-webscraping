@@ -1,6 +1,6 @@
-# Projeto web scraping Newly
+# Projeto web scraping Knewin
 
-Este projeto foi desenvolvido para o desafio da empresa Newly.
+Este projeto foi desenvolvido para o desafio da empresa Knewin.
 
 ## Objetivo
 
