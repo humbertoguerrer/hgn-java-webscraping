@@ -26,7 +26,7 @@ public class SwaggerConfig {
     }
 
     private ApiInfo metaInfo() {
-        ApiInfo apiInfo = new ApiInfo("Java web scraping for Newly", "API for register and search news from " +
+        ApiInfo apiInfo = new ApiInfo("Java web scraping for Knewin", "API for register and search news from " +
                 "InfoMoney portal through web scraping.", "0.1",
                 "Terms of Service",
                 new Contact("Humberto Guerrer Neto", "https://github.com/humbertoguerrer", "humberto.guerrer@gmail.com"),
